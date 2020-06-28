@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>Ristorante Con Fusion</title>
 </head>
@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -43,8 +43,8 @@
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal"> 
+                    <h4 class="modal-title" style="color: white">Login</h4>
+                    <button id="times" type="button" class="close"> 
                         &times;
                     </button>
 
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button id="cancelButton" type="button" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -89,7 +89,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-items-center align-self-center">
-                    <button type="button" class="btn-lg btn-block btn-warning" data-toggle="modal" data-target="#reserveModal">
+                    <button id="reserve-table-button"type="button" class="btn-lg btn-block btn-warning">
                         Reserve Table
                     </button>
 
@@ -97,8 +97,8 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title text-dark" id="reserveModal">Reserve a Table</h4>
-                                    <button type="button" class="close" data-dismiss="modal"> 
+                                    <h4 class="modal-title text-light">Reserve a Table</h4>
+                                    <button id="times2" type="button" class="close"> 
                                             &times;
                                     </button>
                                 </div>
@@ -135,7 +135,7 @@
                                     <div class="row mt-3">
                                         <div class="col-12 col-sm-3 text-dark">Section</div>
                                         <div class="col-12 col-sm-9">
-                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <div class="btn-group btn-group-toggle" id="selectionButton" data-toggle="buttons">
                                                 <label class="btn btn-success active">
                                                     <input type="radio" name="options" id="option1" checked> Non-Smoking
                                                 </label>
@@ -160,7 +160,7 @@
                                     
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button id="cancelButton2" type="button" class="btn btn-secondary">Close</button>
                                     <button type="button" class="btn btn-primary">Save changes</button>
                                 </div>
                             </div>
@@ -324,6 +324,24 @@
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
             });
+        });
+        $('#times').click(function() {
+            $('#loginModal').modal('toggle');
+        });
+        $('#times2').click(function() {
+            $('#reserveModal').modal('toggle');
+        });
+        $('#cancelButton').click(function() {
+            $('#loginModal').modal('toggle');
+        });
+        $('#cancelButton2').click(function() {
+            $('#reserveModal').modal('toggle');
+        });
+        $('#reserve-table-button').click(function() {
+            $('#reserveModal').modal('toggle');
+        });
+        $('#loginButton').click(function() {
+            $('#loginModal').modal('toggle');
         });
     </script>
 </body>

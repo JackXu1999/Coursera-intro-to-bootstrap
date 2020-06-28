@@ -74,3 +74,21 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+
+#loginModal {
+    .modal-header {
+        background-color: $background-dark;
+    }
+    .modal-content {
+        background-color: $background-light;
+    }
+}
+
+#reserveModal {
+    .modal-header {
+        background-color: $background-dark;
+    }
+    .modal-content {
+        background-color: $background-light;
+    }
+}
