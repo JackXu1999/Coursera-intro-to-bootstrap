@@ -8,4 +8,4 @@ Building this website has used:
 
 Build by Shengkai in summer 2020.
 
-[snapshot of the website](img/snapshot.png)
+[snapshot of the website](img/Ristorante%20Con%20Fusion.pdf)
