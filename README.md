@@ -6,4 +6,6 @@ Building this website has used:
 - NPM
 - Task runners: Grunt and Gulp
 
+Build by Shengkai in summer 2020.
+
 [snapshot of the website](img/Ristorante%20Con%20Fusion.pdf)
